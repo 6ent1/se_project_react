@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 import { APIkey, coordinates } from "../../utils/constants";
 import { filterWeatherData, getWeather } from "../../utils/weatherApi";
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import ItemModal from "../ItemModal/ItemModal";
 import Main from "../Main/Main";
@@ -44,6 +45,7 @@ function App() {
       <div className="page__content">
         <Header handleAddClick={handleAddClick} weatherData={weatherData} />
         <Main weatherData={weatherData} handleCardClick={handleCardClick} />
+        <Footer />
       </div>
       <ModalWithForm
         title="New garment"
