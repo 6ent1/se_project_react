@@ -1,0 +1,38 @@
+.modal__content.modal__content_type_image {
+  max-width: 498px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.modal__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  gap: 12px;
+}
+
+.modal__caption {
+  padding: 0;
+  margin: 0;
+}
+
+.modal__weather {
+  padding: 0;
+  margin: 0;
+}
+
+.modal__image {
+  width: 100%;
+}
+
+.modal__close.modal__close-white {
+  background-image: url(../../assets/CloseBtn.png);
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border: none;
+  top: 24px;
+  right: 24px;
+}
