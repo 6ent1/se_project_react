@@ -18,3 +18,7 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+.modal__radio-input {
+  margin-right: 8px;
+}
