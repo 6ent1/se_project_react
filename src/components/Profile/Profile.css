@@ -1,0 +1,5 @@
+.profile {
+  display: grid;
+  grid-template-columns: 345px 1fr;
+  margin-bottom: 80px;
+}
