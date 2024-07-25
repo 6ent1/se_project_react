@@ -8,8 +8,14 @@
 
 .modal__footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 32px;
+  align-items: start;
+}
+
+.modal__text {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -23,8 +29,25 @@
   margin: 0;
 }
 
+.modal__delete-btn {
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 77, 0, 1);
+  padding: 0;
+  margin: 0 0 0 auto;
+
+  font-family: Cabinet Grotesk;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+}
+
 .modal__image {
-  width: 100%;
+  max-width: 498px;
+
+  aspect-ratio: 1/1;
+  object-fit: cover;
 }
 
 .modal__close.modal__close-white {
@@ -35,4 +58,12 @@
   border: none;
   top: 24px;
   right: 24px;
+}
+
+@media screen and (max-width: 712px) {
+  .modal__content.modal__content_type_image {
+    width: max(162px, calc((100vw - 60px)));
+    /* height: max(162px, calc((100vw - 60px) / 2)); */
+    border-radius: 11px;
+  }
 }

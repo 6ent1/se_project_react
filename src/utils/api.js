@@ -8,15 +8,11 @@ function checkResponse(res) {
   return Promise.reject(`Error: ${res.status}`);
 }
 
-export { checkResponse };
-
 function getItems() {
   return fetch(`${baseUrl}/items`, {
     headers: headers,
   }).then(checkResponse);
 }
-
-export { getItems };
 
 function postItems({ name, weather, imageUrl }) {
   return fetch(`${baseUrl}/items`, {
@@ -26,8 +22,6 @@ function postItems({ name, weather, imageUrl }) {
   }).then(checkResponse);
 }
 
-export { postItems };
-
 function deleteItems(item) {
   return fetch(`${baseUrl}/items/${item._id}`, {
     method: "DELETE",
@@ -35,4 +29,4 @@ function deleteItems(item) {
   }).then(checkResponse);
 }
 
-export { deleteItems };
+export { checkResponse, deleteItems, getItems, postItems };

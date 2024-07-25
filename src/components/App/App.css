@@ -22,3 +22,9 @@
 .modal__radio-input {
   margin-right: 8px;
 }
+
+@media screen and (max-width: 712px) {
+  .page__content {
+    padding: 0 16px;
+  }
+}

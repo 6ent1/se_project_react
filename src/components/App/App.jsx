@@ -60,7 +60,7 @@ function App() {
           (cardItem) => cardItem._id !== item._id
         );
         setClothingItems(newClothingItems);
-        setActiveModal("");
+        closeActiveModal();
       })
       .catch((e) => console.error(e));
   };
@@ -84,6 +84,7 @@ function App() {
 
   useEffect(() => {
     const handleKeyDown = (evt) => {
+      if (!activeModal) return;
       if (evt.key === "Escape") {
         closeActiveModal();
       }
@@ -94,10 +95,11 @@ function App() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, []);
+  }, [activeModal]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {
+      if (!activeModal) return;
       if (e.target.classList.contains("modal")) {
         closeActiveModal();
       }
@@ -108,7 +110,7 @@ function App() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, [activeModal]);
 
   return (
     <div className="page">

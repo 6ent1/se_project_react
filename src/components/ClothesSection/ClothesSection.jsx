@@ -12,7 +12,7 @@ function ClothesSection({ onCardClick, clothingItems, handleAddClick }) {
           type="button"
           onClick={handleAddClick}
         >
-          + Add Items
+          + Add New
         </button>
       </div>
       <ul className="cards__list">

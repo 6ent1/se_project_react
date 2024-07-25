@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useForm } from "../../hooks/useForm";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import "../ModalWithForm/ModalWithForm.css";
 
 const AddItemModal = ({ onClose, onAddItem, isOpen }) => {
-  const [values, setValues] = React.useState({
-    // name: "",
-    // imageUrl: "",
-    // weather: "",
+  const { values, handleChange, setValues } = useForm({
+    name: "",
+    imageUrl: "",
+    weather: "",
   });
 
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  };
+  // const [values, setValues] = React.useState({
+  //   name: "",
+  //   imageUrl: "",
+  //   weather: "",
+  // });
+
+  // const handleChange = (e) => {
+  //   setValues({ ...values, [e.target.name]: e.target.value });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();

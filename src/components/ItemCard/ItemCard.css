@@ -1,5 +1,6 @@
 .card {
-  max-width: 323px;
+  width: 323px;
+  height: 326px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -25,4 +26,13 @@
 
 .card__image {
   width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 712px) {
+  .card {
+    width: max(162px, calc((100vw - 60px) / 2));
+    height: max(162px, calc((100vw - 60px) / 2));
+    border-radius: 11px;
+  }
 }

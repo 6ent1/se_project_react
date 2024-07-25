@@ -3,3 +3,12 @@
   grid-template-columns: 345px 1fr;
   margin-bottom: 80px;
 }
+
+@media screen and (max-width: 712px) {
+  .profile {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 80px;
+  }
+}

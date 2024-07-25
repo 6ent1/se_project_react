@@ -2,3 +2,10 @@
   display: flex;
   gap: 10px;
 }
+
+@media screen and (max-width: 712px) {
+  .sidebar {
+    display: flex;
+    justify-content: center;
+  }
+}

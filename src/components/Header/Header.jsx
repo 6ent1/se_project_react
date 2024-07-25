@@ -15,9 +15,19 @@ function Header({ handleAddClick, weatherData }) {
         <img className="header__logo" src={logo} alt="WTWR logo" />
       </Link>
 
+      <div className="header__mobile-user-container"></div>
+
+      <input
+        type="checkbox"
+        className="header__user-container_toggle"
+        id="header__user-container_toggle"
+      />
+      <label htmlFor="header__user-container_toggle"></label>
+
       <p className="header__date-and-location">
         {currentDate}, {weatherData.city}
       </p>
+
       <ToggleSwitch />
       <button
         onClick={handleAddClick}
