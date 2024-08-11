@@ -1,0 +1,47 @@
+.signin-label {
+  width: auto;
+  border: none;
+}
+
+.signin-input {
+  max-width: 440px;
+  width: 100%;
+  height: 24px;
+  border: none;
+  margin: 8px 28px 24px 0;
+  border-bottom: 1px solid black;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.signin-button {
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  border: none;
+  width: 73px;
+  height: 36px;
+}
+
+.signin-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.login__signup {
+  border: none;
+  background-color: white;
+  color: gray;
+}
+
+.login__signup:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}

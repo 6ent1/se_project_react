@@ -1,4 +1,4 @@
-.card {
+/* .card {
   width: 323px;
   height: 326px;
   position: relative;
@@ -17,7 +17,6 @@
   color: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 2px 12px;
-  /* font-family: Cabinet Grotesk; */
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -27,6 +26,93 @@
 .card__image {
   width: 100%;
   object-fit: cover;
+}
+
+@media screen and (max-width: 712px) {
+  .card {
+    width: max(162px, calc((100vw - 60px) / 2));
+    height: max(162px, calc((100vw - 60px) / 2));
+    border-radius: 11px;
+  }
+} */
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 328px;
+  display: flex;
+  justify-content: center;
+  border-width: 1px;
+  border-color: #e9e9e9;
+}
+
+.card__header {
+  position: absolute;
+  top: 15px;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  max-width: 110px;
+  position: absolute;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.card__name {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 2px 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+}
+
+.card__like-button {
+  width: 15px;
+  height: 18px;
+
+  background-image: url(../../assets/like-card-button.svg);
+  border: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.card__like-button-active {
+  width: 15px;
+  height: 18px;
+  background-image: url(../../assets/activated-like-button.svg);
+  border: none;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* .card__delete-button {
+  position: absolute;
+  border: none;
+  background-image: url("../../assets/close-button.svg");
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 20px;
+  cursor: pointer;
+} */
+
+.card__image {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.card__image:hover {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 712px) {

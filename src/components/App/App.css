@@ -8,11 +8,12 @@
   font-family: "Cabinet Grotesk";
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .page__content {
-  max-width: 1360px;
-  margin: 0 auto;
   padding: 0 20px;
   display: flex;
   flex-direction: column;

@@ -10,16 +10,6 @@ const AddItemModal = ({ onClose, onAddItem, isOpen }) => {
     weather: "",
   });
 
-  // const [values, setValues] = React.useState({
-  //   name: "",
-  //   imageUrl: "",
-  //   weather: "",
-  // });
-
-  // const handleChange = (e) => {
-  //   setValues({ ...values, [e.target.name]: e.target.value });
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     onAddItem(values, () => {

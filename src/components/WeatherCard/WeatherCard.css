@@ -11,8 +11,9 @@
   line-height: 40px;
   margin: 0;
   position: absolute;
-  top: 20px;
+  top: 23px;
   left: 16px;
+  color: #fff;
 }
 
 .weather-card__image {

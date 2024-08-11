@@ -7,6 +7,12 @@
   gap: 20px;
 }
 
+/* .weather-card__temp {
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+} */
+
 @media screen and (max-width: 712px) {
   .cards__list {
     gap: 15px;

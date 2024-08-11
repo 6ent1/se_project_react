@@ -2,6 +2,17 @@
   display: flex;
   align-items: center;
   gap: 20px;
+  padding: 6px 0;
+}
+
+.clothes-section__header p {
+  padding: 0;
+  margin: 0;
+}
+
+.clothes-section {
+  padding: 0;
+  margin: 0;
 }
 
 .clothes-section__header-btn {
@@ -14,4 +25,12 @@
 
 .clothes-section__header-btn:hover {
   color: rgba(0, 0, 0, 1);
+}
+
+.clothes-section__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }

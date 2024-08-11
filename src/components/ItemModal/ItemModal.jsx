@@ -1,7 +1,13 @@
 import React from "react";
 import "./ItemModal.css";
 
-function ItemModal({ activeModal, onClose, card, onDeleteItem }) {
+function ItemModal({
+  activeModal,
+  onClose,
+  card,
+  handleDeleteCard,
+  confirmDeleteModal,
+}) {
   return (
     <div className={`modal ${activeModal === "preview" && "modal_opened"}`}>
       <div className="modal__content modal__content_type_image">
@@ -16,10 +22,7 @@ function ItemModal({ activeModal, onClose, card, onDeleteItem }) {
             <h2 className="modal__caption">{card.name}</h2>
             <p className="modal__weather">Weather: {card.weather}</p>
           </div>
-          <button
-            className="modal__delete-btn"
-            onClick={() => onDeleteItem(card) && onClose}
-          >
+          <button className="modal__delete-btn" onClick={confirmDeleteModal}>
             Delete item
           </button>
         </div>
