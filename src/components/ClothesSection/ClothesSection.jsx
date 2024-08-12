@@ -32,7 +32,7 @@ function ClothesSection({
           {clothingItems
             .filter((item) => {
               // console.log(item.owner, userData._id);
-              return item.owner == userData._id;
+              return item.owner === userData._id;
             })
             .map((item, index) => (
               <ItemCard

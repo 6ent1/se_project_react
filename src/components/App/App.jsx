@@ -61,7 +61,7 @@ function App() {
           .then((updatedCard) => {
             //debugger;
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard.data : item))
+              cards.map((item) => (item._id === id ? updatedCard : item))
             );
           })
           .catch((err) => console.log(err))
@@ -71,7 +71,7 @@ function App() {
           .removeCardLike({ id, token })
           .then((updatedCard) => {
             setClothingItems((cards) =>
-              cards.map((item) => (item._id === id ? updatedCard.data : item))
+              cards.map((item) => (item._id === id ? updatedCard : item))
             );
           })
           .catch((err) => console.log(err));
@@ -353,6 +353,7 @@ function App() {
               onClose={closeActiveModal}
               handleDeleteCard={handleDeleteItem}
               confirmDeleteModal={confirmDeleteModal}
+              isLoggedIn={isLoggedIn}
             />
           )}
 
