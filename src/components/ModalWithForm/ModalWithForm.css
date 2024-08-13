@@ -87,6 +87,14 @@
   text-align: left;
 }
 
+.modal__legend {
+  color: black;
+}
+
+/* .modal__input.modal__radio-input:checked ~ label {
+  color: black;
+} */
+
 .modal__radio-buttons {
   border: none;
   padding: 0;

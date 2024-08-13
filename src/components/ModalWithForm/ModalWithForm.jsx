@@ -20,7 +20,7 @@ function ModalWithForm({
         <form onSubmit={onSubmit} className="modal__form">
           {children}
 
-          {modalbtn == "Sign in" || "Sign up" ? (
+          {modalbtn == "Sign in" || modalbtn == "Sign up" ? (
             <></>
           ) : (
             <button type="submit" className="modal__submit">
