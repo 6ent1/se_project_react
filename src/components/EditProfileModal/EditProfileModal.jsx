@@ -64,11 +64,11 @@ const EditProfileModal = ({ handleProfileUpdate, isOpen, onClose }) => {
         className="edit-input"
         placeholder="Avatar URL"
       />
-      {/* <div>
+      <div>
         <button className="edit-button" type="submit">
           Save Changes
         </button>
-      </div> */}
+      </div>
     </ModalWithForm>
   );
 };

@@ -35,7 +35,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
-  const [temp, setTemp] = useState(0);
+  const [temp] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState({
     _id: "",
@@ -45,7 +45,7 @@ function App() {
     name: "",
   });
   const navigate = useNavigate();
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked] = useState(false);
 
   const handleCardLike = (item, isLiked) => {
     const token = localStorage.getItem("jwt");
@@ -87,11 +87,12 @@ function App() {
     // Call the function, passing it the JWT.
     api
       .getUserInfo(token)
-      .then(({ _id, username, name, email, avatar }) => {
+      .then((userData) => {
         // If the response is successful, log the user in, save their
         // data to state, and navigate them to /profile.
+        setUserData(userData);
         setIsLoggedIn(true);
-        setUserData({ _id, username, name, email, avatar });
+
         navigate("/profile");
       })
       .catch(console.error);
@@ -133,7 +134,6 @@ function App() {
       .editProfile({ name, avatar, token })
       .then((data) => {
         setUserData(data);
-        closeActiveModal();
         closeActiveModal();
       })
       .catch(console.error);
@@ -225,32 +225,27 @@ function App() {
       .catch(console.error);
   }, []);
 
+  // Close modals on ESC press and outside click
   useEffect(() => {
+    if (!activeModal) return;
+
     const handleKeyDown = (evt) => {
-      if (!activeModal) return;
       if (evt.key === "Escape") {
         closeActiveModal();
       }
     };
 
-    window.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [activeModal]);
-
-  useEffect(() => {
     const handleClickOutside = (e) => {
-      if (!activeModal) return;
       if (e.target.classList.contains("modal")) {
         closeActiveModal();
       }
     };
 
+    window.addEventListener("keydown", handleKeyDown);
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
+      window.removeEventListener("keydown", handleKeyDown);
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [activeModal]);
