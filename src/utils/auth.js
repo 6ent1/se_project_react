@@ -1,4 +1,7 @@
-const BASE_URL = "http://localhost:3001";
+const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://api.wtwrg.jumpingcrab.com"
+    : "http://localhost:3001";
 import { handleServerResponse } from "../utils/api";
 
 const signup = (name, avatar, email, password) => {

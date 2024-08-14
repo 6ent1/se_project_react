@@ -104,6 +104,10 @@
   accent-color: black;
 }
 
+.modal__radio-buttons :has(:checked) {
+  color: #000;
+}
+
 .modal__submit {
   width: 124px;
   height: 36px;
