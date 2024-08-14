@@ -35,7 +35,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({});
   const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
   const [clothingItems, setClothingItems] = useState([]);
-  const [temp] = useState(0);
+
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState({
     _id: "",
@@ -259,7 +259,7 @@ function App() {
           <div className="page__content">
             <Header
               handleAddClick={handleAddClick}
-              temp={temp}
+              temp={weatherData.temp}
               weatherData={weatherData}
               handleSignUp={handleSignUp}
               handleSignIn={handleSignIn}
@@ -273,7 +273,7 @@ function App() {
                     weatherData={weatherData}
                     onCardClick={handleCardClick}
                     clothingItems={clothingItems}
-                    weatherTemp={temp}
+                    weatherTemp={weatherData.temp}
                     handleDeleteCard={handleDeleteItem}
                     onAddItem={onAddItem}
                     closeActiveModal={closeActiveModal}
@@ -292,7 +292,7 @@ function App() {
                       onCardClick={handleCardClick}
                       clothingItems={clothingItems}
                       handleAddClick={handleAddClick}
-                      weatherTemp={temp}
+                      weatherTemp={weatherData.temp}
                       weatherData={weatherData}
                       handleDeleteCard={handleDeleteItem}
                       onAddItem={onAddItem}
